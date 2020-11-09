@@ -1,0 +1,43 @@
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar {
+  @include flex;
+  justify-content: space-between;
+  padding: 1rem 1.4rem;
+  border-bottom: 2px solid #f8f8f8;
+
+  &__brand {
+    display: flex;
+    h1{
+      text-transform: uppercase;
+      letter-spacing: 8px;
+      font-weight: 300;
+      
+    }
+  }
+  ul {
+    @include flex;
+    list-style: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    li{
+      margin-left : 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      position: relative;
+     .item-num{
+       position: absolute;
+       font-size: 0.8rem;
+       top: -5px;
+       right:-10px;
+     }
+    }
+  }
+  &__cart {
+    @include flex;
+  }
+}
