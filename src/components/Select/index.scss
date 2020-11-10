@@ -1,0 +1,17 @@
+.select {
+  select {
+    padding: 0.7rem 1rem;
+    padding-right: 3rem;
+    background: white;
+    border: 1px solid #f2f2f4;
+    appearance: none;
+    font-size: 14px;
+    width: 350px;
+    height: 58px;
+    cursor: pointer;
+  }
+  & svg {
+    position: relative;
+    right: 25px;
+  }
+}
