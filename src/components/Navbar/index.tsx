@@ -6,7 +6,7 @@ export default function Navbar() {
     <nav className="nav-bar">
       <div className="nav-bar__brand">
         <h1>lumin</h1>
-        <ul>
+        <ul className="nav-bar__shoping">
           <li>Shop</li>
           <li>Learn</li>
         </ul>
