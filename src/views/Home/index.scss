@@ -1,0 +1,43 @@
+.home {
+  &__header {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    justify-content: space-between;
+    h1 {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 2.8rem;
+    }
+  }
+  &__select {
+  }
+  &__body {
+    background: #e3e6e3;
+    min-height: 100vh;
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
+  @media only screen and (max-width: 768px) {
+    &__header {
+      padding: 0 4%;
+      h1 {
+        font-size: 2rem;
+      }
+    }
+
+    &__body {
+      grid-template-columns: 1fr 1fr;
+    }
+    &__select {
+      width: 50%;
+    }
+  }
+  @media only screen and (max-width: 550px) {
+    &__body {
+      grid-template-columns: 1fr;
+    }
+  }
+}
