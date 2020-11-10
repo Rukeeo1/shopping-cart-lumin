@@ -1,0 +1,21 @@
+.product {
+  padding: 1rem;
+  &__image-wrap {
+    height: 200px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  text-align: center;
+  h1{
+    font-size: 0.9999rem;
+    // color: red;
+    font-weight: 300;
+    margin-top: 1rem;
+  }
+  &__price {
+    font-weight: 600;
+  }
+}
