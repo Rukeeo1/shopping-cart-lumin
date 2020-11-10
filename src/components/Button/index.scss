@@ -1,0 +1,30 @@
+.btn {
+  padding: 14px 40px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+
+  &--default,
+  &--default:hover {
+    background: #444444 !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(148, 147, 168, 0.21);
+    box-sizing: border-box;
+  }
+  &--secondary,
+  &--secondary:hover {
+    background: #ffffff !important;
+    color: #161531 !important;
+    border: 1px solid rgba(148, 147, 168, 0.21) !important;
+    box-sizing: border-box;
+    font-weight: 700 !important;
+  }
+
+  &__icon {
+    position: relative;
+    bottom: 3px;
+  }
+}
