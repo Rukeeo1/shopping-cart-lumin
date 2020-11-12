@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import AppContext from 'context';
 import './index.scss';
 
 export default function Navbar() {
+  const appContext = useContext(AppContext);
+  const handleOpenCart = () =>
+    document.getElementById('cart')?.classList.toggle('cart-closed');
+
   return (
     <nav className="nav-bar">
       <div className="nav-bar__brand">
@@ -14,9 +19,9 @@ export default function Navbar() {
       <div className="nav-bar__cart">
         <ul>
           <li>Account</li>
-          <li>
+          <li onClick={handleOpenCart}>
             <i className="fa fa-shopping-cart" aria-hidden="true"></i>
-            <span className="item-num">4</span>
+            <span className="item-num">{appContext?.cartItems.length}</span>
           </li>
         </ul>
       </div>
