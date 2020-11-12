@@ -3,6 +3,7 @@
   height: 200px;
   padding: 1rem;
   flex: 2;
+  background-color: #ffffff;
   &__title-wrapper {
     flex: 2;
   }
@@ -20,6 +21,7 @@
     flex: 0.5;
     .fa-plus, .fa-minus {
       cursor: pointer;
+      z-index: 90;
     
     }
   }
@@ -32,7 +34,7 @@
     display: flex;
     justify-content: center;
     img{
-      height: 100%;
+      height: 100px;
       align-self: center;
       max-width: 100%;
       object-fit: contain;
