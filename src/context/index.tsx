@@ -8,6 +8,7 @@ const AppContext = React.createContext<AppContextInterface | null>(null);
 interface IContextProps {
   children: React.ReactNode;
 }
+type CartItems = IProductDetails[];
 export const AppContextProvider = ({ children }: IContextProps) => {
   const [cartItems, setCartItems] = useState<any>([]);
   const getCartItems = () => {
@@ -77,6 +78,21 @@ export const AppContextProvider = ({ children }: IContextProps) => {
       setCartItems(updatedItems);
     }
   };
+  const updateCartItems = (cartItemsWithUpdatedPrices: CartItems) => {
+    localStorage.setItem(
+      'cartProducts',
+      JSON.stringify(cartItemsWithUpdatedPrices)
+    );
+    setCartItems(cartItemsWithUpdatedPrices);
+  };
+
+  const removeItemFromCart = (itemId: number) => {
+    const cartItemsAfterDelete = cartItems.filter(
+      (item: IProductDetails) => item.id !== itemId
+    );
+    setCartItems(cartItemsAfterDelete);
+    localStorage.setItem('cartProducts', JSON.stringify(cartItemsAfterDelete));
+  };
   return (
     <AppContext.Provider
       value={{
@@ -84,6 +100,8 @@ export const AppContextProvider = ({ children }: IContextProps) => {
         getCartItems,
         increaseOrDecreaseCartItem,
         addItemsToCart,
+        updateCartItems,
+        removeItemFromCart,
       }}
     >
       {children}
