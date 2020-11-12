@@ -2,6 +2,7 @@
   display: flex;
   height: 200px;
   padding: 1rem;
+  position: relative;
   flex: 2;
   background-color: #ffffff;
   &__title-wrapper {
@@ -19,11 +20,12 @@
     border: 1px solid;
     padding: 0.4rem;
     flex: 0.5;
-    .fa-plus, .fa-minus {
+    .fa-plus, .fa-minus,fa-times {
       cursor: pointer;
       z-index: 90;
     
     }
+    
   }
   &__price {
     flex: 2;
@@ -40,6 +42,13 @@
       object-fit: contain;
       
     }
+  }
+  .fa-times{
+    position: absolute;
+    top:4%;
+    right: 10%;
+    cursor: pointer;
+    z-index: 40;
   }
   @media only screen and (max-width: 600px) {
     h1 {
