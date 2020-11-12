@@ -22,7 +22,7 @@ const Cart = React.forwardRef<Ref, Props>((props, ref) => {
   const appContext = useContext(AppContext);
   useEffect(() => {
     appContext?.getCartItems();
-  }, []);
+  }, [appContext]);
 
   const {
     handleClick,
