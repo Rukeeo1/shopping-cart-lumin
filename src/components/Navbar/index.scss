@@ -43,5 +43,10 @@
     &__shoping {
       display: none !important;
     }
+    &__cart {
+      li:first-child {
+        display: none;
+      }
+    }
   }
 }
