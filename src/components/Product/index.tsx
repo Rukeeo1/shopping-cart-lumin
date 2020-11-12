@@ -1,8 +1,7 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import './index.scss';
 import Button from 'components/Button';
 import AppContext from 'context';
-import { getSymbolFromCurrency } from 'helpers';
 
 export interface IProductDetails {
   id: number;
@@ -37,7 +36,7 @@ export default function Product({
       </div>
       <h1>{title}</h1>
       <p className="product__price">
-        From {getSymbolFromCurrency(selectedCurrency) || '$'} {price}
+        From {selectedCurrency} {price}
       </p>
       <Button
         textContent="Add to Cart"
